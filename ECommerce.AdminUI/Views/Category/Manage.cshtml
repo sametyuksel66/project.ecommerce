@@ -1,0 +1,50 @@
+﻿@model IEnumerable<ECommerce.AdminUI.DTOs.GetCategoryDTO>
+
+@{
+    ViewData["Title"] = "Manage";
+}
+
+<div class="m-3">
+    <table class="table">
+
+        <thead>
+            <tr>
+                <th>
+                    ID
+                </th>
+                <th>
+                    Kategori Adi
+                </th>
+                <th>
+                    Ust Kategori Adi
+                </th>
+                <th colspan="2" style="text-align:center">
+                    Yönet
+                </th>
+
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.ID)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Name)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.ParentCategoryName)
+                    </td>
+                    <td>
+                        @Html.ActionLink("Güncelle", "Update", "Category", new { id = item.ID }, new { @class = "btn btn-warning btn-sm" })
+                    </td>
+                    <td>
+                        @Html.ActionLink("Sil", "Delete", "Category", new { id = item.ID }, new { @class = "btn btn-danger btn-sm" })
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

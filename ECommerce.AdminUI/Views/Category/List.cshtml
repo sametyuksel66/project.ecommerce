@@ -1,0 +1,39 @@
+﻿@model IEnumerable<ECommerce.AdminUI.DTOs.GetCategoryDTO>
+
+@{
+    ViewData["Title"] = "List";
+}
+
+<div class="m-3">
+    <table class="table">
+        <thead>
+            <tr>
+                <th>
+                    ID
+                </th>
+                <th>
+                    Kategoriler
+                </th>
+                <th>
+                    Ust Kategori Adi
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.ID)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Name)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.ParentCategoryName)
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

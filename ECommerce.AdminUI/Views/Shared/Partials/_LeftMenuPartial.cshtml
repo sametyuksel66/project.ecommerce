@@ -1,0 +1,336 @@
+﻿
+@{ string activePage = ViewBag.active;
+   string activePageMain = ViewBag.activeMain; 
+}
+
+<aside class="main-sidebar sidebar-dark-primary elevation-4">
+    <!-- Brand Logo -->
+    <a href="#" class="brand-link">
+        <img src="~/dist/img/AdminLTELogo.png" alt="E-Commerce Logo" class="brand-image img-circle elevation-3"
+             style="opacity: .8">
+        <span class="brand-text font-weight-light">E-Commerce</span>
+    </a>
+
+
+
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <!-- Sidebar user panel (optional) -->
+        <div class="user-panel mt-3 pb-3 mb-3 d-flex">
+            <div class="image">
+                <img src="~/dist/img/user2-160x160.jpg" class="img-circle elevation-2" alt="User Image">
+            </div>
+            <div class="info">
+                <a href="#" class="d-block">Samet YUKSEL</a>
+            </div>
+        </div>
+
+        <!-- Sidebar Menu -->
+        <nav class="mt-2">
+            <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+                <!-- Add icons to the links using the .nav-icon class
+                with font-awesome or any other icon font library -->
+
+                <!-- Kategoriler -->
+                <li class="@(activePageMain=="category" ? "nav-item has-treeview menu-open":"nav-item has-treeview")">
+                    <a href="#" class="@(activePageMain=="category"? "nav-link active": "nav-link")">
+                        <i class="nav-icon fas fa-th"></i>
+                        <p>
+                            KATEGORİLER
+                            <i class="right fas fa-angle-left"></i>
+                        </p>
+                    </a>
+                    <ul class="nav nav-treeview">
+                        <li class="nav-item">
+                            <a href="~/Category/List" class="@(activePage=="category-list"? "nav-link active":"nav-link")">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p>Kategorileri Listele</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="~/Category/Add" class="@(activePage=="category-add"? "nav-link active":"nav-link")">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p>Kategori Ekle</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="~/Category/Manage" class="@(activePage=="category-manage"? "nav-link active":"nav-link")">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p>Kategorileri Yönet</p>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+
+
+                <!-- Kitaplar -->
+                <li class="@(activePageMain=="book"?"nav-item has-treeview menu-open":"nav-item has-treeview")">
+                    <a href="#" class="@(activePageMain=="book"?"nav-link active":"nav-link")">
+                        <i class="nav-icon fas fa-book"></i>
+                        <p>
+                            KİTAPLAR
+                            <i class="fas fa-angle-left right"></i>
+                        </p>
+                    </a>
+                    <ul class="nav nav-treeview">
+                        <li class="nav-item">
+                            <a href="~/Book/List" class="@(activePage=="book-list"?"nav-link active":"nav-link")">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p>Kitaplari Listele</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="~/Book/Manage" class="@(activePage=="book-manage"?"nav-link active":"nav-link")">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p>Kitapları Yönet</p>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+
+
+                <!-- Yazarlar -->
+                <li class="@(activePageMain=="author"?"nav-item has-treeview menu-open":"nav-item has-treeview")">
+                    <a href="#" class="@(activePageMain=="author"?"nav-link active":"nav-link")">
+                        <i class="nav-icon fas fa-user-edit"></i>
+                        <p>
+                            YAZARLAR
+                            <i class="right fas fa-angle-left"></i>
+                        </p>
+                    </a>
+                    <ul class="nav nav-treeview">
+                        <li class="nav-item">
+                            <a href="~/Author/List" class="@(activePage=="author-list"?"nav-link active":"nav-link")">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p>Yazarları Listele</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="~/Author/Manage" class="@(activePage=="author-manage"?"nav-link active":"nav-link")">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p>Yazarları Yönet</p>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+
+
+                <!-- Çevirmenler -->
+                <li class="nav-item has-treeview">
+                    <a href="#" class="nav-link">
+                        <i class="nav-icon fas fa-edit"></i>
+                        <p>
+                            ÇEVİRMENLER
+                            <i class="fas fa-angle-left right"></i>
+                        </p>
+                    </a>
+                    <ul class="nav nav-treeview">
+                        <li class="nav-item">
+                            <a href="~/Translator/List" class="nav-link">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p>Çevirmenleri Listele</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="~/Translator/Manage" class="nav-link">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p>Çevirmenleri Yönet</p>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+
+
+                <!-- Resimler -->
+                <li class="nav-item has-treeview">
+                    <a href="#" class="nav-link">
+                        <i class="nav-icon far fa-image"></i>
+                        <p>
+                            RESİMLER
+                            <i class="fas fa-angle-left right"></i>
+                        </p>
+                    </a>
+                    <ul class="nav nav-treeview">
+                        <li class="nav-item">
+                            <a href="~/Image/List" class="nav-link">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p>Resimleri Listele</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="~/Image/Manage" class="nav-link">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p>Resimleri Yönet</p>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+
+
+                <!-- Yayınevleri -->
+                <li class="nav-item has-treeview">
+                    <a href="#" class="nav-link">
+                        <i class="nav-icon fas fa-book-open"></i>
+                        <p>
+                            YAYINEVLERİ
+                            <i class="fas fa-angle-left right"></i>
+                        </p>
+                    </a>
+                    <ul class="nav nav-treeview">
+                        <li class="nav-item">
+                            <a href="~/Publisher/List" class="nav-link">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p>Yayınevlerini Listele</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="~/Publisher/Manage" class="nav-link">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p>Yayınevilerinı Yönet</p>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+
+
+                <!-- Cilt Tipleri -->
+                <li class="nav-item has-treeview">
+                    <a href="#" class="nav-link">
+                        <i class="nav-icon far fa-file"></i>
+                        <p>
+                            CİLT TİPLERİ
+                            <i class="fas fa-angle-left right"></i>
+                        </p>
+                    </a>
+                    <ul class="nav nav-treeview">
+                        <li class="nav-item">
+                            <a href="~/CoverType/List" class="nav-link">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p>Cilt Tiplerini Listele</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="~/CoverType/Manage" class="nav-link">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p>Cilt Tipilerinı Yönet</p>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+
+
+                <!-- Diller -->
+                <li class="nav-item has-treeview">
+                    <a href="#" class="nav-link">
+                        <i class="nav-icon fas fa-comment-dots"></i>
+                        @*<i class="nav-icon fas fa-comments"></i>*@
+                        <p>
+                            DİLLER
+                            <i class="fas fa-angle-left right"></i>
+                        </p>
+                    </a>
+                    <ul class="nav nav-treeview">
+                        <li class="nav-item">
+                            <a href="~/Language/List" class="nav-link">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p>Dilleri Listele</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="~/Language/Manage" class="nav-link">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p>Dilleri Yönet</p>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+
+
+                <!-- Kargolar -->
+                <li class="nav-item has-treeview">
+                    <a href="#" class="nav-link">
+                        <i class="nav-icon fas fa-shipping-fast"></i>
+                        <p>
+                            KARGOLAR
+                            <i class="fas fa-angle-left right"></i>
+                        </p>
+                    </a>
+                    <ul class="nav nav-treeview">
+                        <li class="nav-item">
+                            <a href="~/Shipper/List" class="nav-link">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p>Kargoalrı Listele</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="~/Shipper/Manage" class="nav-link">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p>Kargoları Yönet</p>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+
+
+                <!-- Kampanyalar -->
+                <li class="nav-item has-treeview">
+                    <a href="#" class="nav-link">
+                        <i class="nav-icon fas fa-disease"></i>
+                        <p>
+                            KAMPANYALaR
+                            <i class="fas fa-angle-left right"></i>
+                        </p>
+                    </a>
+                    <ul class="nav nav-treeview">
+                        <li class="nav-item">
+                            <a href="~/Campaign/List" class="nav-link">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p>Kampanyaları Listele</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="~/Campaign/Manage" class="nav-link">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p>Kampanyaları Yönet</p>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+
+
+                <!-- İndirim Kuponları -->
+                <li class="nav-item has-treeview">
+                    <a href="#" class="nav-link">
+                        <i class="nav-icon fas fa-ticket-alt"></i>
+                        <p>
+                            İNDİRİM KUPONLARI
+                            <i class="fas fa-angle-left right"></i>
+                        </p>
+                    </a>
+                    <ul class="nav nav-treeview">
+                        <li class="nav-item">
+                            <a href="~/DiscountCoupon/List" class="nav-link">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p>Kuponları Listele</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="~/DiscountCoupon/Manage" class="nav-link">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p>Kuponları Yönet</p>
+                            </a>
+                        </li>
+
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+        <!-- /.sidebar-menu -->
+    </div>
+    <!-- /.sidebar -->
+</aside>
+
+
+
+
+

@@ -1,0 +1,42 @@
+﻿@model ECommerce.AdminUI.DTOs.addCategoryDTO
+
+
+
+<hr />
+<div class="col-3 m-3">
+    @using (Html.BeginForm("Add", "Category", FormMethod.Post))
+    {
+        <table>
+            <thead>
+                <tr>
+                    <th>
+                        Kategori Adi
+                    </th>
+                    <th>
+                        Ust Kategori Secimi
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        @Html.TextBoxFor(model => model.name)
+
+                    </td>
+
+                    <td>
+                        @Html.DropDownListFor(model => model.ParentCategoryId, Model.categoryLists.Select(x => new SelectListItem { Text = x.Name, Value = x.ID.ToString() }), "Lütfen Seçiniz")
+                    </td>
+                    <td>
+
+                        <button type="submit" class="btn btn-success btn-sm m-1">Gönder</button>
+
+
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    }
+</div>
+
+
