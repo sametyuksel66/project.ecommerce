@@ -110,6 +110,8 @@ namespace ECommerce.AdminUI.Controllers
         [HttpGet]
         public async Task<IActionResult> Update(int id)
         {
+            ViewBag.activeMain = "category";
+            ViewBag.active = "category-manage";
             updateCategoryDTO model = new updateCategoryDTO();
             HttpClient client = _api.Initial();
             HttpResponseMessage responseMessage = await client.GetAsync("api/Category/id?id="+id);
