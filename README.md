@@ -1,4 +1,4 @@
-#Project.ECommerce bir eticaret sistemi geliştirme projesidir.
+# Project.ECommerce bir eticaret sistemi geliştirme projesidir.
 
 
 
@@ -16,5 +16,5 @@ Proje aşamaları tamamlandıkça kodlar ve ekran görselleri buraya eklenecekti
 
 
 
-##Veri Tabanı
-![db](https://user-images.githubusercontent.com/57520093/113495220-a7073600-94f8-11eb-8c3c-070b11396ba1.jpg)
+## Veri Tabanı
+![database](https://user-images.githubusercontent.com/57520093/113495220-a7073600-94f8-11eb-8c3c-070b11396ba1.jpg)
